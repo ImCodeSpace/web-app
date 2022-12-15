@@ -1,0 +1,44 @@
+{
+  "name": "im-code-space-web",
+  "version": "0.0.1",
+  "description": "Rewriting VSCode's history but in VR",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImCodeSpace/web-app.git"
+  },
+  "keywords": [
+    "VR",
+    "IDE"
+  ],
+  "author": "ethanmcrae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImCodeSpace/web-app/issues"
+  },
+  "homepage": "https://github.com/ImCodeSpace/web-app#readme",
+  "dependencies": {
+    "@react-three/drei": "9.32.7",
+    "@react-three/fiber": "8.8.8",
+    "@react-three/xr": "5.1.1",
+    "@types/react": "18.0.10",
+    "@types/react-dom": "18.0.5",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "three": "0.145.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.0.8",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
