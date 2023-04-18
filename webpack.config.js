@@ -1,7 +1,8 @@
+const fs = require('fs');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   mode: 'development',
   module: {
     rules: [
@@ -31,6 +32,10 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist')
+    },
+    https: {
+      key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+      cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
     },
     hot: true,
     compress: true,

@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "create-ssl": "openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes",
+    "export-cert": "openssl x509 -in cert.pem -outform DER -out cert.crt"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,7 @@
   },
   "keywords": [
     "VR",
+    "AR",
     "IDE"
   ],
   "author": "ethanmcrae",
