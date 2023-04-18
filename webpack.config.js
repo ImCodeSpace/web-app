@@ -33,9 +33,12 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist')
     },
-    https: {
-      key: fs.readFileSync(path.join(__dirname, 'key.pem')),
-      cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
+    server: {
+      type: 'https',
+      options: {
+        key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+        cert: fs.readFileSync(path.join(__dirname, 'cert.pem')),
+      }
     },
     hot: true,
     compress: true,

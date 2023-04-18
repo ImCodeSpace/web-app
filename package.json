@@ -4,8 +4,10 @@
   "description": "Rewriting VSCode's history but in VR",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "npm run check-ssl && npm run dev",
+    "dev": "webpack serve --mode development --open",
     "build": "webpack --mode production",
+    "check-ssl": "test -f key.pem && test -f cert.pem || npm run create-ssl",
     "create-ssl": "openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes",
     "export-cert": "openssl x509 -in cert.pem -outform DER -out cert.crt"
   },
